@@ -1,0 +1,15 @@
+
+{
+    "name": "monorepo-boileplate",
+    "version": "0.1.0",
+    "description": "Monorepo",
+    "author": "Pawel Kalinowski",
+    "license": "MIT",
+    "private": true,
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "cleanup": "./cleanup.sh"
+    }
+}
