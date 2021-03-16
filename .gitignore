@@ -12,3 +12,7 @@ node_modules
 
 .idea
 .idea/*
+
+.log
+.DS_Store
+.jest-*
