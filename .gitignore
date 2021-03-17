@@ -1,3 +1,4 @@
+# VsCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -8,11 +9,14 @@
 # Local History for Visual Studio Code
 .history/
 
-node_modules
-
+# PhpStorm
 .idea
 .idea/*
 
 .log
 .DS_Store
+
+# Project
+node_modules
+packages/**/node_modules
 .jest-*
