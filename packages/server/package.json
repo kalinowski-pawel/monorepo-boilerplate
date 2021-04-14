@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend for monorepo-boilerplate",
+  "author": "Pawel Kalinowski <pkalinowski83@gmail.com>",
+  "homepage": "https://github.com/kalinowski-pawel/monorepo-boilerplate#readme",
+  "license": "ISC",
+  "main": "lib/server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalinowski-pawel/monorepo-boilerplate.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/kalinowski-pawel/monorepo-boilerplate/issues"
+  }
+}
