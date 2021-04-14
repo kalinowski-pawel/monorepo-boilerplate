@@ -1,0 +1,32 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "description": "Additional tools and libraries",
+  "author": "Pawel Kalinowski <pkalinowski83@gmail.com>",
+  "homepage": "https://github.com/kalinowski-pawel/monorepo-boilerplate#readme",
+  "license": "ISC",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "storybook": "start-storybook -p 9009"
+  },
+  "bugs": {
+    "url": "https://github.com/kalinowski-pawel/monorepo-boilerplate/issues"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "@material-ui/core": "^4.11.3",
+    "@storybook/react": "^6.2.8",
+    "babel-loader": "^8.2.2"
+  }
+}
