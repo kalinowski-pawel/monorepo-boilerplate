@@ -22,3 +22,4 @@ packages/**/node_modules
 .jest-*
 
 .prettierignore
+lerna-debug.log
