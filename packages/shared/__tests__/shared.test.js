@@ -3,5 +3,5 @@
 const shared = require('..');
 
 describe('shared', () => {
-    it('needs tests');
+  it('needs tests');
 });

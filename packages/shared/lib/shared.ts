@@ -3,5 +3,5 @@
 module.exports = shared;
 
 function shared() {
-    // TODO
+  // TODO
 }

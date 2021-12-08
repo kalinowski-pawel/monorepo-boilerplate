@@ -20,3 +20,5 @@
 node_modules
 packages/**/node_modules
 .jest-*
+
+.prettierignore
