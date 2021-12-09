@@ -1,0 +1,34 @@
+{
+  "name": "shared",
+  "version": "0.1.0",
+  "description": "> TODO: description",
+  "author": "pablo <pkalinowski83@gmail.com>",
+  "homepage": "https://github.com/kalinowski-pawel/monorepo-boilerplate#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalinowski-pawel/monorepo-boilerplate.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/kalinowski-pawel/monorepo-boilerplate/issues"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.37",
+    "sass": "^1.44.0",
+    "typescript": "^4.5.2"
+  },
+  "devDependencies": {
+    "prettier": "2.5.1"
+  }
+}

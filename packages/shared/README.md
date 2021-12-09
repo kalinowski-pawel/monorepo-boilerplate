@@ -1,11 +1,11 @@
-# `library`
+# `shared`
 
 > TODO: description
 
 ## Usage
 
 ```
-const library = require('library');
+const shared = require('shared');
 
 // TODO: DEMONSTRATE API
 ```

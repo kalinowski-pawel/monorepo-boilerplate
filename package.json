@@ -1,26 +1,16 @@
 {
   "name": "monorepo-boilerplate",
   "private": true,
-  "version": "0.1.0",
-  "description": "Monorepo",
-  "author": "Pawel Kalinowski",
+  "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "bootstrap": "yarn install; lerna bootstrap;",
+    "start": "lerna run start --parallel",
+    "start:client": "lerna run --scope client --stream dev",
+    "build:client": "lerna run --scope client --stream build",
+    "run:build:client": "lerna run start --scope client"
+  },
   "workspaces": [
     "packages/*"
-  ],
-  "scripts": {
-    "start:client": "yarn workspace client start",
-    "start:server": "yarn workspace server start",
-    "storybook": "yarn workspace library storybook"
-  },
-  "devDependencies": {
-    "@types/jest": "26.0.20",
-    "@types/node": "14.14.35",
-    "@types/react": "17.0.3",
-    "@types/react-dom": "17.0.2",
-    "lerna": "^4.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "typescript": "4.2.3"
-  }
+  ]
 }
