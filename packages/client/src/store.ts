@@ -1,4 +1,4 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
 
 import rootReducer from '../modules/reducers';
@@ -10,6 +10,15 @@ const store = configureStore({
   devTools: process.env.NODE_ENV !== 'production'
 });
 
+export type AppState = ReturnType<typeof store.getState>
+
 export type AppDispatch = typeof store.dispatch;
+
+export type AppThunk<ReturnType = void> = ThunkAction<
+    ReturnType,
+    AppState,
+    unknown,
+    Action<string>
+    >
 
 export default store;
