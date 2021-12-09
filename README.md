@@ -1,31 +1,42 @@
 # monorepo-boilerplate
 
-This boilerplate was created to quick start monorepo application faster.
+This boilerplate was created to quick start monorepo application.
 
 Project allows creating complex application on frontend and backend, also we can add additional tools.
 Monorepo is split into packages:
 
 ** client - allows creating frontend app with react v17
-** server - directory for backend, based on node (version)
-\*\* library - directory for additional tools, for example storybook, materialUI
+** server - TODO directory for backend, goLang/node/different
+\*\* shared - directory for additional tools, for example storybook, materialUI
 
 ##Tech stack
 
 ### client:
 
-- react v17 (CRA)
+- next.js
+  - css modules
+  - next router
+- react v17
+- redux
+- redux thunk
 - typescript
+- eslint
+- prettier
+- sass
 
-### library:
+### shared:
+- react v17
+- typescript
+- css modules
+- eslint
+- prettier
+- sass
+
 
 TODO
 
-- jest
-- mobx
+- jest/testing library
 - docker?
-- eslint
 - cypress
-- css modules
-- css grid
-- sass.css
-- react router
+- storybook
+- materialUI
