@@ -1,20 +1,44 @@
 import React, { useEffect } from 'react';
-import { AppDispatch } from '../../store';
-import { useDispatch } from 'react-redux';
-import { getGHUsers } from '../../../modules/gitHubExampleModule/actions';
 import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { map } from 'lodash';
+import { getGHUsers } from '../../../modules/gitHubExampleModule/actions';
+import { selectGHUsers } from '../../../modules/gitHubExampleModule/selectors';
 
-const GitHubExample = () => {
-  const dispatch = useDispatch<AppDispatch>();
-  useEffect(() => {
-    dispatch(getGHUsers());
-  }, [])  
-    
-  return (
-    <div>
-      GH component
-    </div>
-  )
+import styles from './styles.module.scss';
+
+interface PropsInterface {
+  getGHUsers: unknown,
+  data: [],
 }
 
-export default GitHubExample;
+const GitHubExample: React.FC<PropsInterface> = (props) => {
+
+  useEffect(() => {
+    props.getGHUsers;
+  }, []);
+
+  return (
+    <div>
+      <title>GitHub users</title>
+      {props.data && map(props.data, user => (
+        <div key={user.login} className={styles.row}>
+          <img src={user.avatar_url} width={50}/>
+          <div >{user.login}</div>
+        </div>
+        
+      ))}
+    </div>
+  );
+};
+
+GitHubExample.defaultProps = {
+  data: []
+}
+
+export default connect(
+  createStructuredSelector({
+    data: selectGHUsers
+  }),
+  getGHUsers
+)(GitHubExample);

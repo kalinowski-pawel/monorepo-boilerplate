@@ -1,12 +1,12 @@
-import { createAsyncThunk } from '@reduxjs/toolkit';
 import actionTypes from './actionTypes';
 
-export const getGHUsers = createAsyncThunk(
-  `${actionTypes.FETCH_GH_USERS}`,
-  async (data ) => {
-    const response = await fetch('https://api.github.com/users', {
-      method: 'GET'
-    });
-    return response.json();
-  }
-);
+const setGHUsers = users => ({
+  type: actionTypes.FETCH_GH_USERS,
+  payload: users
+});
+
+export const getGHUsers = () => async dispatch => {
+  await fetch('https://api.github.com/users')
+    .then(res => res.json())
+    .then(json => dispatch(setGHUsers(json)));
+};
