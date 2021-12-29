@@ -26,7 +26,7 @@ const gitHubReducer = (state = initialState, action: ActionType) => {
       fetching: action.fetching
     };
   }
-  case actionTypes.FETCH_GH_USERS: {
+  case actionTypes.GET_GH_USERS: {
     return {
       ...state,
       data: action.payload

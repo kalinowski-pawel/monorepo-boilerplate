@@ -2,7 +2,7 @@ import actionTypes from './actionTypes';
 import { AppThunk } from '../../src/store';
 
 const setGHUsers = (users: [object]) => ({
-  type: actionTypes.FETCH_GH_USERS,
+  type: actionTypes.GET_GH_USERS,
   payload: users
 });
 
