@@ -3,42 +3,43 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { map } from 'lodash';
 import { getGHUsers } from '../../../modules/gitHubExampleModule/actions';
-import { selectGHUsers } from '../../../modules/gitHubExampleModule/selectors';
+import { selectFetching, selectGHUsers } from '../../../modules/gitHubExampleModule/selectors';
 
 import styles from './styles.module.scss';
 
 interface PropsInterface {
-  getGHUsers: unknown,
-  data: [],
+	getGHUsers: () => void,
+	data: [],
+	fetching: boolean;
 }
 
 const GitHubExample: React.FC<PropsInterface> = (props) => {
 
   useEffect(() => {
-    props.getGHUsers;
-  }, []);
+    props.getGHUsers();
+  }, [props.getGHUsers]);
 
   return (
-    <div>
-      <title>GitHub users</title>
-      {props.data && map(props.data, user => (
-        <div key={user.login} className={styles.row}>
-          <img src={user.avatar_url} width={50}/>
-          <div >{user.login}</div>
-        </div>
-        
-      ))}
-    </div>
+    <>
+      <div className={styles.container}>
+        <title>GitHub users</title>
+        {!props.fetching && props.data && map((props.data), user => (
+          <div key={user.login} className={styles.container__row}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img alt={user.login} src={user.avatar_url} width={50}/>
+            <span>{user.login}</span>
+          </div>
+
+        ))}
+      </div>
+    </>
   );
 };
 
-GitHubExample.defaultProps = {
-  data: []
-}
-
 export default connect(
   createStructuredSelector({
-    data: selectGHUsers
+    data: selectGHUsers,
+    fetching: selectFetching
   }),
-  getGHUsers
+  getGHUsers,
 )(GitHubExample);

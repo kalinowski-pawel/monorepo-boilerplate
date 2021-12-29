@@ -4,5 +4,10 @@ const selectStore = state => state.gitHub
 
 export const selectGHUsers = createSelector(
   selectStore,
-  state => state
+  state => state.data
+);
+
+export const selectFetching = createSelector(
+  selectStore,
+  state => state.fetching
 );

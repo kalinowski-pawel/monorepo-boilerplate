@@ -1,21 +1,29 @@
 import actionTypes from './actionTypes';
 
 type InitialStateType = {
-	isFetching: boolean;
+	fetching: boolean;
 	hasError: boolean;
 	data: object[];
 }
 
 const initialState: InitialStateType = {
-  isFetching: false,
+  fetching: false,
   hasError: false,
   data: []
 };
 
 const gitHubReducer = (state = initialState, action) => {
   switch (action.type) {
+
+  case actionTypes.FETCHING: {
+    return {
+      fetching: action.fetching
+    };
+  }
   case actionTypes.FETCH_GH_USERS: {
-    return action.payload;
+    return {
+      data: action.payload
+    };
   }
   default: {
     return state;
