@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from '@reduxjs/toolkit';
+import { AppDispatch } from '../../store';
 import { createStructuredSelector } from 'reselect';
 import { map } from 'lodash';
 import { getGHUsers } from '../../../modules/gitHubExampleModule/actions';
@@ -36,10 +38,18 @@ const GitHubExample: React.FC<PropsInterface> = (props) => {
   );
 };
 
+const mapDispatchToProps = (dispatch: AppDispatch) =>
+  bindActionCreators(
+    {
+      getGHUsers: getGHUsers
+    },
+    dispatch
+  );
+
 export default connect(
   createStructuredSelector({
     data: selectGHUsers,
     fetching: selectFetching
   }),
-  getGHUsers,
+  mapDispatchToProps
 )(GitHubExample);
