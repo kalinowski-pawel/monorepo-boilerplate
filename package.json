@@ -8,7 +8,10 @@
     "start": "lerna run start --parallel",
     "start:client": "lerna run --scope client --stream dev",
     "build:client": "lerna run --scope client --stream build",
-    "run:build:client": "lerna run start --scope client"
+    "run:build:client": "lerna run start --scope client",
+    "start:shared": "lerna run --scope shared --stream start",
+    "storybook:shared": "lerna run --scope shared --stream storybook",
+    "storybook-build:shared": "lerna run --scope shared --stream build-storybook"
   },
   "workspaces": [
     "packages/*"
