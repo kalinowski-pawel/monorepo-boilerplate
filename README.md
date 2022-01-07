@@ -27,7 +27,7 @@ Monorepo is split into packages:
 ### shared:
 - react v17
 - typescript
-- css modules
+- css modules & styled components
 - eslint
 - prettier
 - sass
