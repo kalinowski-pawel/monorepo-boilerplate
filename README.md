@@ -48,5 +48,4 @@ TODO
 * To install dependencies as dev, we have to add prefix `--dev` 
 for example `lerna add --dev npm-lib-name`
 * Installing dependency for particular package require to run command   
-```lerna add npm-lib-name --scope=package-name``` or  
 ```yarn workspace package-name add npm-package-name```

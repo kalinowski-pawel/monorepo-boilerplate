@@ -14,7 +14,7 @@ export const SimpleButton = ({
   size = 'medium',
   color = 'primary',
   backgroundColor,
-  variant,
+  variant = 'outlined',
   label,
   ...props
 }: SimpleButtonProps) => {
@@ -23,6 +23,7 @@ export const SimpleButton = ({
       variant={variant}
       style={{ backgroundColor }}
       color={color}
+      size={size}
       {...props}
     >
       {label}
