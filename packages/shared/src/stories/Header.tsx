@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from '../components/SimpleButton/SimpleButton';
+import { SimpleButton } from '../components/SimpleButton/SimpleButton';
 import './header.css';
 
 interface HeaderProps {
@@ -34,11 +34,11 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
       </div>
       <div>
         {user ? (
-          <Button size="small" onClick={onLogout} label="Log out" />
+          <SimpleButton variant="outlined" size="small" onClick={onLogout} label="Log out" />
         ) : (
           <>
-            <Button size="small" onClick={onLogin} label="Log in" />
-            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
+            <SimpleButton variant="outlined" size="small" onClick={onLogin} label="Log in" />
+            <SimpleButton variant="outlined" size="small" onClick={onCreateAccount} label="Sign up" />
           </>
         )}
       </div>
