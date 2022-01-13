@@ -15,7 +15,6 @@ const Template: ComponentStory<typeof UserCard> = (args) => <UserCard {...args} 
 
 export const UserCardWithData = Template.bind({});
 UserCardWithData.args = {
-  variant: 'rounded',
   alt: 'AV',
   src: avatar1,
   name: 'Example user name',

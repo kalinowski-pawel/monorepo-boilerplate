@@ -32,7 +32,12 @@ export const UserCard: React.FC<UserCardProps> = ({
   return (
     <>
       <Card>
-        <Avatar src={avatar1} alt='alternative text' width='25' height='25' />
+        <Avatar
+          src={avatar1}
+          alt={alt}
+          variant={variant}
+          width='25'
+          height='25' />
         <span {...props}>{name}</span>
       </Card>
     </>
