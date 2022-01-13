@@ -40,6 +40,7 @@ TODO
 - cypress
 - storybook
 - materialUI
+- add services for  communication with API
 
 ## Technical documentation
 ### 1. Install dependencies

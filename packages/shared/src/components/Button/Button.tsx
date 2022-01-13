@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button as ButtonMUI }  from '@mui/material';
 
-interface SimpleButtonProps {
+interface ButtonProps {
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
   color?: 'primary' | 'secondary' | 'success' | 'error';
@@ -10,16 +10,16 @@ interface SimpleButtonProps {
   onClick?: () => void;
 }
 
-export const SimpleButton = ({
+export const Button = ({
   size = 'medium',
   color = 'primary',
   backgroundColor,
   variant = 'outlined',
   label,
   ...props
-}: SimpleButtonProps) => {
+}: ButtonProps) => {
   return (
-    <Button
+    <ButtonMUI
       variant={variant}
       style={{ backgroundColor }}
       color={color}
@@ -27,6 +27,6 @@ export const SimpleButton = ({
       {...props}
     >
       {label}
-    </Button>
+    </ButtonMUI>
   );
 };
