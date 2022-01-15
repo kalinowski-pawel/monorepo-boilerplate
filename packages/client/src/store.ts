@@ -5,7 +5,7 @@ import rootReducer from '../modules/reducers';
 
 const ENABLE_LOGGER = false;
 
-// export type RootState = ReturnType<typeof rootReducer>;
+export type RootState = ReturnType<typeof rootReducer>;
 const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => {

@@ -27,7 +27,7 @@ Monorepo is split into packages:
 ### shared:
 - react v17
 - typescript
-- css modules
+- css modules & styled components
 - eslint
 - prettier
 - sass
@@ -40,12 +40,13 @@ TODO
 - cypress
 - storybook
 - materialUI
+- add services for  communication with API
 
 ## Technical documentation
 ### 1. Install dependencies
 * To install dependency globally (for all packages), just run  
-```lerna add dependency-lib-name```.  
-* Installing dependency for particular package require to run command   
-```lerna add dependency-lib-name --scope=package-name```.  
+```lerna add npm-lib-name```  
 * To install dependencies as dev, we have to add prefix `--dev` 
-for example `lerna add --dev dependency-lib-name`
+for example `lerna add --dev npm-lib-name`
+* Installing dependency for particular package require to run command   
+```yarn workspace package-name add npm-package-name```

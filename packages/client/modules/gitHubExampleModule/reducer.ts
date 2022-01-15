@@ -18,7 +18,7 @@ const initialState: InitialStateType = {
   data: []
 };
 
-const gitHubReducer = (state = initialState, action: ActionType) => {
+export const gitHubReducer = (state = initialState, action: ActionType) => {
   switch (action.type) {
   case actionTypes.FETCHING: {
     return {
@@ -37,5 +37,3 @@ const gitHubReducer = (state = initialState, action: ActionType) => {
   }
   }
 };
-
-export default gitHubReducer;
