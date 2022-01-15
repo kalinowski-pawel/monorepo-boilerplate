@@ -8,8 +8,8 @@ interface UserCardProps {
   variant?: 'rounded' | 'square';
   src: string;
   alt: string;
-  width: string;
-  height: string;
+  avatarWidth: string;
+  avatarHeight: string;
   name: string;
 }
 
@@ -17,9 +17,10 @@ const Card = styled.section`
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 5px;
-  border: 1px solid #000;
+  padding: 10px 5px 5px 10px;
   border-radius: 4px;
+  box-shadow: 0 10px 6px -6px #ddd;
+  width: 300px;
 `;
 
 export const UserCard: React.FC<UserCardProps> = ({
@@ -27,6 +28,8 @@ export const UserCard: React.FC<UserCardProps> = ({
   variant,
   alt,
   name,
+  avatarWidth= '25',
+  avatarHeight= '25',
   ...props
 }) => {
   return (
@@ -36,8 +39,9 @@ export const UserCard: React.FC<UserCardProps> = ({
           src={avatar1}
           alt={alt}
           variant={variant}
-          width='25'
-          height='25' />
+          width={avatarWidth}
+          height={avatarHeight}
+        />
         <span {...props}>{name}</span>
       </Card>
     </>

@@ -7,7 +7,7 @@ import avatar2 from './assets/avatar2.svg'
 
 
 export default {
-  title: 'Example/Avatar',
+  title: 'Shared/Avatar',
   component: Avatar,
   args: {}
 } as ComponentMeta<typeof Avatar>;

@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from '../components/Button/Button';
 
 export default {
-  title: 'Example/Simple Button',
+  title: 'Shared/Simple Button',
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
