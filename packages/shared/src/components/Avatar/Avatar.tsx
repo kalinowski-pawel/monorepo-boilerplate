@@ -15,11 +15,11 @@ const AvatarGH = styled.div`
 `;
 
 export const Avatar: React.FC<AvatarProps> = ({
-                                                src,
-                                                variant,
-                                                alt,
-                                                ...props
-                                              }) => {
+  src,
+  variant,
+  alt,
+  ...props
+}) => {
   return (
     <>
       <AvatarGH>
