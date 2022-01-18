@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { Button as ButtonMUI }  from '@mui/material';
 
 interface ButtonProps {
@@ -10,7 +10,7 @@ interface ButtonProps {
   onClick?: () => void;
 }
 
-export const Button = ({
+const Button = ({
   size = 'medium',
   color = 'primary',
   backgroundColor,
@@ -30,3 +30,5 @@ export const Button = ({
     </ButtonMUI>
   );
 };
+
+export default memo(Button);

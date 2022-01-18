@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { memo, useCallback, useMemo } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from '@reduxjs/toolkit';
 import { AppDispatch } from '../../store';
@@ -6,32 +6,34 @@ import { createStructuredSelector } from 'reselect';
 import { map } from 'lodash';
 import { getGHUsers } from '../../../modules/gitHubExampleModule/actions';
 import { selectFetching, selectGHUsers } from '../../../modules/gitHubExampleModule/selectors';
+import UserCard from 'shared/src/components/UserCard/UserCard';
+import Button from 'shared/src/components/Button/Button';
 
 import styles from './styles.module.scss';
 
 interface PropsInterface {
-	getGHUsers: () => void,
-	data: [],
-	fetching: boolean;
+  getGHUsers: () => void,
+  data: [],
+  fetching: boolean;
 }
 
 const GitHubExample: React.FC<PropsInterface> = (props) => {
 
-  useEffect(() => {
+  const fetchUsers = useCallback(() => {
     props.getGHUsers();
-  }, [props.getGHUsers]);
+  }, [getGHUsers]);
 
+  const label = useMemo(() => {
+    return props.fetching ? 'Fetching...' : 'Fetch users';
+  }, [props.fetching])
   return (
     <>
-      <div className={styles.container}>
-        <title>GitHub users</title>
+      <div className={styles.action}>
+        <Button onClick={fetchUsers} color='primary' variant='contained' label={label} />
+      </div>
+      <div className={styles.list}>
         {!props.fetching && props.data && map((props.data), user => (
-          <div key={user.login} className={styles.container__row}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img alt={user.login} src={user.avatar_url} width={50}/>
-            <span>{user.login}</span>
-          </div>
-
+          <UserCard key={user.login} src={user.avatar_url} alt={user.login} name={user.login} />
         ))}
       </div>
     </>
@@ -52,4 +54,4 @@ export default connect(
     fetching: selectFetching
   }),
   mapDispatchToProps
-)(GitHubExample);
+)(memo(GitHubExample));
