@@ -45,7 +45,6 @@ For faster developing **Monorepo boilerplate** contains packages :
 
 
 TODO
-
 - jest/testing library
 - docker?
 - cypress
@@ -59,3 +58,9 @@ TODO
 for example `lerna add --dev npm-lib-name`
 * Installing dependency for particular package require to run command   
 ```yarn workspace package-name add npm-package-name```
+### 2. Additional package dependencies for CLIENT
+* To use additional (e.i. new created packages) in client package, please remember to update `next.config.js` 
+Next.js has to know what modules are required.
+```
+const withTM = require('next-transpile-modules')(['@monorepo-boilerplate/shared']);
+```
