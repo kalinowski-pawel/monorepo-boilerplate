@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { UserCard } from '../components/UserCard/UserCard';
+import UserCard from '../components/UserCard/UserCard';
 
 import avatar1 from './assets/avatar1.svg'
 import avatar2 from './assets/avatar2.svg'

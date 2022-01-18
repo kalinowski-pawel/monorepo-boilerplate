@@ -1,5 +1,5 @@
-import React from 'react';
-import { Avatar } from '../Avatar/Avatar';
+import React, {memo} from 'react';
+import Avatar from '../Avatar/Avatar';
 import styled from 'styled-components';
 
 
@@ -26,10 +26,10 @@ const Card = styled.section`
   0 100px 80px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   width: 300px;
-  margin: 10px;
+  margin: 0 10px 20px 10px;
 `;
 
-export const UserCard: React.FC<UserCardProps> = ({
+const UserCard: React.FC<UserCardProps> = ({
   src,
   variant,
   alt,
@@ -53,3 +53,5 @@ export const UserCard: React.FC<UserCardProps> = ({
     </>
   );
 };
+
+export default memo(UserCard);

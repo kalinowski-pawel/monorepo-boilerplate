@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { Avatar as AvatarMUI } from '@mui/material';
 import styled from 'styled-components';
 
@@ -14,7 +14,7 @@ const AvatarGH = styled.div`
   padding: 5px;
 `;
 
-export const Avatar: React.FC<AvatarProps> = ({
+const Avatar: React.FC<AvatarProps> = ({
   src,
   variant,
   alt,
@@ -46,3 +46,5 @@ export const Avatar: React.FC<AvatarProps> = ({
     </>
   );
 };
+
+export default memo(Avatar);
