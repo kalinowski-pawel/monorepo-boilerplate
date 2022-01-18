@@ -1,16 +1,25 @@
-# monorepo-boilerplate
+# Monorepo Boilerplate
 
-This boilerplate was created to quick start monorepo application.
+This boilerplate was created to fast and easy start monorepo application.
 
-Project allows creating complex application on frontend and backend, also we can add additional tools.
-Monorepo is split into packages:
+Project allows creating complex application on frontend and backend, also we can add additional tools.  
+For faster developing **Monorepo boilerplate** contains packages :
 
-** client - allows creating frontend app with react v17
-** server - TODO directory for backend, goLang/node/different
-\*\* shared - directory for additional tools, for example storybook, materialUI
+* **client** - allows creating frontend app with **react v17** and **Next.js** 
+* **shared** - directory for shared components, integrated with **storybook** and using **materialUI**
+* **server** - TODO directory for backend, goLang/node/different  
 
-##Tech stack
+# Quick start / Usage
+- Install [lerna](https://github.com/lerna/lerna) first: `yarn global add lerna`
+- Run `yarn bootstrap` to install all dependencies and setup monorepo symlinks using [lerna](https://github.com/lerna/lerna).
+- Run `yarn start` to start development both servers  client and shared with all packages included.
+- Run `yarn start:client` to start only client server with all.
+- Run `yarn start:shared` [optional] to start only shared app server if it will be needed.
+- Run `yarn storybook:shared` to start only storybook app from shared.
+- Run `yarn test` TODO run all tests.
 
+
+##Tech stack by particular package
 ### client:
 
 - next.js
@@ -31,6 +40,8 @@ Monorepo is split into packages:
 - eslint
 - prettier
 - sass
+- storybook
+- materialUI
 
 
 TODO
@@ -38,8 +49,6 @@ TODO
 - jest/testing library
 - docker?
 - cypress
-- storybook
-- materialUI
 - add services for  communication with API
 
 ## Technical documentation

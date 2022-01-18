@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "yarn install; lerna bootstrap;",
+    "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
     "start:client": "lerna run --scope client --stream dev",
     "build:client": "lerna run --scope client --stream build",

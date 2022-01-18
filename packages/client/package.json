@@ -1,11 +1,11 @@
 {
-  "name": "client",
+  "name": "@monorepo-boilerplate/client",
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "next dev",
+    "start": "next dev",
     "build": "next build",
-    "start": "next start",
+    "run": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -20,7 +20,7 @@
     "redux-logger": "^3.0.6",
     "reselect": "^4.1.5",
     "sass": "^1.44.0",
-    "shared": "^0.1.0",
+    "@monorepo-boilerplate/shared": "^0.1.0",
     "typescript": "^4.5.2"
   },
   "devDependencies": {
