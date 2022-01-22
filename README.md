@@ -1,9 +1,9 @@
-# Monorepo Boilerplate
+# Pro-Monorepo Boilerplate
 
-This boilerplate was created to fast and easy start monorepo application.
+Pro-Monorepo boilerplate was created to fast and easy start monorepo application.
 
 Project allows creating complex application on frontend and backend, also we can add additional tools.  
-For faster developing **Monorepo boilerplate** contains packages :
+For faster developing **Pro-Monorepo boilerplate** contains packages :
 
 * **client** - allows creating frontend app with **react v17** and **Next.js** 
 * **shared** - directory for shared components, integrated with **storybook** and using **materialUI**
@@ -22,33 +22,23 @@ For faster developing **Monorepo boilerplate** contains packages :
 
 ### client:
 - next.js
-  - css modules
   - next router
 - react v17
-- redux
-- immer / TODO
-- redux thunk
 - typescript
-- eslint
-- prettier
 - jest/testing library
-- sass
+- architecture -> redux, redux thunk, modules(actions, selectors, reducers, actionTypes), services, immer / TODO 
+- linters -> eslint extend prettier and tslint, config in root extended by each package
+- styling -> css modules with SASS
 
 ### shared:
 - react v17
 - typescript
-- css modules & styled components
-- eslint
-- prettier
-- sass
 - storybook
 - materialUI
 - jest/testing library
+- styling -> css modules & styled components with SASS
+- linter -> eslint extend prettier and tslint, config in root extended by each package
 
-
-TODO
-- docker?
-- add services for  communication with API
 
 ## Technical documentation
 ### 1. Install dependencies
@@ -58,16 +48,16 @@ TODO
 for example   
 `lerna add --dev npm-lib-name`
 * Installing dependency for particular package require to run command   
-```yarn workspace @monorepo-boilerplate/package-name add npm-package-name```  
-```example: yarn workspace @monorepo-boilerplate/client add jest```
+```yarn workspace @pro-monorepo-boilerplate/package-name add npm-package-name```  
+```example: yarn workspace @pro-monorepo-boilerplate/client add jest```
 ### 2. Additional package dependencies for CLIENT
 * To use additional (e.i. new created packages) in client package, please remember to update `next.config.js` 
 Next.js has to know what modules are required.
 ```
-const withTM = require('next-transpile-modules')(['@monorepo-boilerplate/shared']);
+const withTM = require('next-transpile-modules')(['@pro-monorepo-boilerplate/shared']);
 ```
-### 2. Testing
-Monorepo is configured to use libraries like Jest and React Testing library. To run tests just use `yarn test` from
+### 3. Testing
+Pro-Monorepo is configured to use libraries like Jest and React Testing library. To run tests just use `yarn test` from
 root directory.  
 There is in root directory configuration with `babel.config.js` and `jest.config.ts`. If you want to run tests  
 directly from packages, those configurations should be extended or overwritten in particular package.  
