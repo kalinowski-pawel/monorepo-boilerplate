@@ -18,25 +18,6 @@ For faster developing **Monorepo boilerplate** contains packages :
 - Run `yarn storybook:shared` to start only storybook app from shared.
 - Run `yarn test` TODO run all tests.
 
-##Testing
-Monorepo is configured to use libraries like Jest and React Testing library. To run tests just use `yarn test` from
-root directory.  
-There is in root directory configuration with `babel.config.js` and `jest.config.ts`. If you want to run tests  
-directly from packages, those configurations should be extended or overwritten in particular package.  
-More details here [babel monorepo](https://babeljs.io/docs/en/config-files#monorepos)
-To handling styles in react components by Jest, there is dependency installed `identity-obj-proxy`.  
-It allows running tests without problems.
-
-To test components with redux, you have to use provider and pass the store:  
-Like in [Example test](packages/client/src/views/GitHubExample/index.test.tsx) 
-```
-<Provider store={store}>
-  <GitHubExample />
-</Provider>);
-```
-
-
-
 ##Tech stack by particular package
 
 ### client:
@@ -85,3 +66,20 @@ Next.js has to know what modules are required.
 ```
 const withTM = require('next-transpile-modules')(['@monorepo-boilerplate/shared']);
 ```
+### 2. Testing
+Monorepo is configured to use libraries like Jest and React Testing library. To run tests just use `yarn test` from
+root directory.  
+There is in root directory configuration with `babel.config.js` and `jest.config.ts`. If you want to run tests  
+directly from packages, those configurations should be extended or overwritten in particular package.  
+More details here [babel monorepo](https://babeljs.io/docs/en/config-files#monorepos)
+To handling styles in react components by Jest, there is dependency installed `identity-obj-proxy`.  
+It allows running tests without problems.
+
+To test components with redux, you have to use provider and pass the store:  
+Like in [Example test](packages/client/src/views/GitHubExample/index.test.tsx)
+```
+<Provider store={store}>
+  <GitHubExample />
+</Provider>);
+```
+
