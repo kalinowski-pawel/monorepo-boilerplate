@@ -6,8 +6,8 @@ import { createStructuredSelector } from 'reselect';
 import { map } from 'lodash';
 import { getGHUsers } from '../../../modules/gitHubExampleModule/actions';
 import { selectFetching, selectGHUsers } from '../../../modules/gitHubExampleModule/selectors';
-import UserCard from '@monorepo-boilerplate/shared/src/components/UserCard/UserCard';
-import Button from '@monorepo-boilerplate/shared/src/components/Button/Button';
+import UserCard from '@pro-monorepo-boilerplate/shared/src/components/UserCard/UserCard';
+import Button from '@pro-monorepo-boilerplate/shared/src/components/Button/Button';
 
 import styles from './styles.module.scss';
 
