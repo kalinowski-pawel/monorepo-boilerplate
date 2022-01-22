@@ -4,14 +4,15 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "yarn install; lerna bootstrap;",
+    "bootstrap": "lerna bootstrap",
     "start": "lerna run start --parallel",
-    "start:client": "lerna run --scope client --stream dev",
-    "build:client": "lerna run --scope client --stream build",
-    "run:build:client": "lerna run start --scope client",
-    "start:shared": "lerna run --scope shared --stream start",
-    "storybook:shared": "lerna run --scope shared --stream storybook",
-    "storybook-build:shared": "lerna run --scope shared --stream build-storybook"
+    "start:client": "lerna run --scope @monorepo-boilerplate/client --stream start",
+    "build:client": "lerna run --scope @monorepo-boilerplate/client --stream build",
+    "run:build:client": "lerna run start --scope @monorepo-boilerplate/client",
+    "start:shared": "lerna run --scope @monorepo-boilerplate/shared --stream start",
+    "storybook:shared": "lerna run --scope @monorepo-boilerplate/shared --stream storybook",
+    "storybook-build:shared": "lerna run --scope @monorepo-boilerplate/shared --stream build-storybook",
+    "test": "jest"
   },
   "workspaces": [
     "packages/*"

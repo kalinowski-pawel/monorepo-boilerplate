@@ -20,6 +20,8 @@
 node_modules
 packages/**/node_modules
 .jest-*
+coverage
+coverage/*
 
 .prettierignore
 lerna-debug.log

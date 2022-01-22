@@ -1,5 +1,5 @@
 {
-  "name": "shared",
+  "name": "@monorepo-boilerplate/shared",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -69,6 +69,9 @@
     "@storybook/preset-create-react-app": "^4.0.0",
     "@storybook/react": "^6.4.9",
     "@types/styled-components": "^5.1.20",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.4.7",
+    "ts-node": "^10.4.0",
     "webpack": "^5.65.0"
   }
 }
