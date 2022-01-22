@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-boilerplate/client",
+  "name": "@pro-monorepo-boilerplate/client",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@monorepo-boilerplate/shared": "^0.1.0",
+    "@pro-monorepo-boilerplate/shared": "^0.1.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@types/react": "^17.0.37",
     "lodash": "^4.17.21",

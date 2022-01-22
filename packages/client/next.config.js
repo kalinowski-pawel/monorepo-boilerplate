@@ -7,5 +7,5 @@ module.exports = {
   }
 };
 
-const withTM = require('next-transpile-modules')(['@monorepo-boilerplate/shared']);
+const withTM = require('next-transpile-modules')(['@pro-monorepo-boilerplate/shared']);
 module.exports = withTM();
