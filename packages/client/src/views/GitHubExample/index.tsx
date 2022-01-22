@@ -23,14 +23,13 @@ interface PropsInterface {
 }
 
 const GitHubExample: React.FC<PropsInterface> = (props) => {
-
   const fetchUsers = useCallback(() => {
     props.getGHUsers();
   }, [getGHUsers]);
 
   const label = useMemo(() => {
     return props.fetching ? 'Fetching...' : 'Fetch users';
-  }, [props.fetching])
+  }, [props.fetching]);
   return (
     <>
       <div className={styles.action}>

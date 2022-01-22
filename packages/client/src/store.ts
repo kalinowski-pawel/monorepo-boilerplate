@@ -1,16 +1,9 @@
-import { configureStore, ThunkAction, Action, bindActionCreators } from '@reduxjs/toolkit';
-import logger from 'redux-logger';
-
+import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import rootReducer from '../modules/reducers';
-
-const ENABLE_LOGGER = false;
 
 export type RootState = ReturnType<typeof rootReducer>;
 const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => {
-    return ENABLE_LOGGER ? getDefaultMiddleware().concat(logger) : getDefaultMiddleware()
-  },
   devTools: process.env.NODE_ENV !== 'production'
 });
 
