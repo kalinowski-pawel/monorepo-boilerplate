@@ -1,7 +1,14 @@
 {
   "extends": [
     "next/core-web-vitals",
-    "../../.eslintrc.json"
+    "../../.eslintrc.json",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "rules": {}
+  "rules": {
+    "max-len": ["error", {"code":  80}]
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ]
 }
