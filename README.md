@@ -9,9 +9,12 @@ For faster developing **Pro-Monorepo boilerplate** contains packages :
 * **shared** - directory for shared components, integrated with **storybook** and using **materialUI** with **TypeScript**
  
 ### Tips and possibilities
-* using `lerna create` we could add easily package as **server** with e.i. Node.js/different as directory for backend.
+* using `lerna create` we can easily add package as **server** with e.i. Node.js as directory for backend.
 * in the same way we can easily add package for mobile, with **React Native**, than use shared components in both, client and mobile  
 * To improve handling state changes in reducers you can add **[Immer](https://immerjs.github.io/immer/)** 
+* To keep clean and structured commits messages I really recommended use **Husky** with **Commitlint** docs [here](https://github.com/conventional-changelog/commitlint)
+* Keep ion mind React packages are based on React CRA, so there is no extracted webpack configuration. However, if you want  
+add some specific configuration you can extend/overwrite cra by using for example **[react-app-rewired](https://github.com/timarney/react-app-rewired)** without ejecting original one
 
 # Quick start / Usage
 - Install [lerna](https://github.com/lerna/lerna) first: `yarn global add lerna`
