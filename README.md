@@ -5,25 +5,31 @@ Pro-Monorepo boilerplate was created to fast and easy start monorepo application
 Project allows creating complex application on frontend and backend, also we can add additional tools.  
 For faster developing **Pro-Monorepo boilerplate** contains packages :
 
-* **client** - allows creating frontend app with **react v17** and **Next.js** 
-* **shared** - directory for shared components, integrated with **storybook** and using **materialUI**
-* **server** - TODO directory for backend, goLang/node/different  
+* **client** - allows creating frontend app with **react v17** and **Next.js**, **TypeScript**, **Redux**
+* **shared** - directory for shared components, integrated with **storybook** and using **materialUI** with **TypeScript**
+ 
+### Tips and possibilities
+* using `lerna create` we can easily add package as **server** with e.i. Node.js as directory for backend.
+* in the same way we can easily add package for mobile, with **React Native**, than use shared components in both, client and mobile  
+* To improve handling state changes in reducers you can add **[Immer](https://immerjs.github.io/immer/)** 
+* To keep clean and structured commits messages I really recommended use **Husky** with **Commitlint** docs [here](https://github.com/conventional-changelog/commitlint)
+* Keep ion mind React packages are based on React CRA, so there is no extracted webpack configuration. However, if you want  
+add some specific configuration you can extend/overwrite cra by using for example **[react-app-rewired](https://github.com/timarney/react-app-rewired)** without ejecting original one
 
 # Quick start / Usage
 - Install [lerna](https://github.com/lerna/lerna) first: `yarn global add lerna`
 - Run `yarn bootstrap` to install all dependencies and setup monorepo symlinks using [lerna](https://github.com/lerna/lerna).
-- Run `yarn start` to start development both servers  client and shared with all packages included.
+- Run `yarn start` to start development all servers in parallel client and shared with all packages included.
 - Run `yarn start:client` to start only client server with all.
 - Run `yarn start:shared` [optional] to start only shared app server if it will be needed.
 - Run `yarn storybook:shared` to start only storybook app from shared.
 - Run `yarn test` TODO run all tests.
 
 ##Tech stack by particular package
-
 ### client:
 - next.js
-  - next router
-- react v17
+  - next router -> routing is handled by next.js, more info here [Next.js routing](https://nextjs.org/docs/routing/introduction)
+- react v17 CRA
 - typescript
 - jest/testing library
 - architecture -> redux, redux thunk, modules(actions, selectors, reducers, actionTypes), services, immer / TODO 
@@ -31,7 +37,7 @@ For faster developing **Pro-Monorepo boilerplate** contains packages :
 - styling -> css modules with SASS
 
 ### shared:
-- react v17
+- react v17 CRA
 - typescript
 - storybook
 - materialUI
@@ -72,4 +78,7 @@ Like in [Example test](packages/client/src/views/GitHubExample/index.test.tsx)
   <GitHubExample />
 </Provider>);
 ```
-
+### 4. Styling 
+All presented frontend packages are using React CRA, which means there are CSS modules available out of the box.  
+For Shared package there is also added `styled-components` library, and it is used in example components [Button component](packages/shared/src/components/Button/Button.tsx)   
+Feel free to use preferred approach for styling, those two are just examples what could be chosen just like that when you're starting with `Pro-monorepo-boilerplate` 

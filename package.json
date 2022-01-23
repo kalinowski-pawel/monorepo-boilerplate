@@ -1,5 +1,6 @@
 {
-  "name": "monorepo-boilerplate",
+  "name": "pro-monorepo-boilerplate",
+  "author": "Pawel Kalinowski (https://github.com/kalinowski-pawel)",
   "private": true,
   "version": "1.0.0",
   "license": "MIT",
