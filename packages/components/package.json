@@ -1,6 +1,6 @@
 {
-  "name": "@pro-monorepo-boilerplate/shared",
-  "version": "0.1.0",
+  "name": "@pro-monorepo-boilerplate/components",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.1",
