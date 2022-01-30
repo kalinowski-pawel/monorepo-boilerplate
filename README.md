@@ -25,7 +25,7 @@ some specific configuration you can extend/overwrite cra by using for example **
 - Run `yarn storybook:components` to start only storybook app from components.
 - Run `yarn test` run all tests.
 
-##Tech stack by particular package
+## Tech stack by particular package
 ### client:
 - next.js
   - next router -> routing is handled by next.js, more info here [Next.js routing](https://nextjs.org/docs/routing/introduction)
