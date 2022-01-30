@@ -23,7 +23,7 @@ some specific configuration you can extend/overwrite cra by using for example **
 - Run `yarn start:client` to start only client server with all.
 - Run `yarn start:components` [optional] to start only components app server if it will be needed.
 - Run `yarn storybook:components` to start only storybook app from components.
-- Run `yarn test` TODO run all tests.
+- Run `yarn test` run all tests.
 
 ##Tech stack by particular package
 ### client:
