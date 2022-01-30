@@ -82,3 +82,8 @@ Like in [Example test](packages/client/src/views/GitHubExample/index.test.tsx)
 All presented frontend packages are using React CRA, which means there are CSS modules available out of the box.  
 For components package there is also added `styled-components` library, and it is used in example components [Button component](packages/components/src/components/Button/Button.tsx)   
 Feel free to use preferred approach for styling, those two are just examples what could be chosen just like that when you're starting with `Pro-monorepo-boilerplate` 
+
+
+
+## Tips and more
+- to get more info and tools for monorepo check this out [https://monorepo.tools/](https://monorepo.tools/)
