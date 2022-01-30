@@ -7,7 +7,7 @@ import avatar2 from './assets/avatar2.svg'
 
 
 export default {
-  title: 'Shared/UserCard',
+  title: 'components/UserCard',
   component: UserCard,
   args: {}
 } as ComponentMeta<typeof UserCard>;

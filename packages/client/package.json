@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@pro-monorepo-boilerplate/shared": "^0.1.0",
+    "@pro-monorepo-boilerplate/components": "^1.0.0",
     "@reduxjs/toolkit": "^1.6.2",
     "@types/react": "^17.0.37",
     "lodash": "^4.17.21",

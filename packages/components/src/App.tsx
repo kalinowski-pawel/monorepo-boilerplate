@@ -5,7 +5,7 @@ function App() {
 	return (
 		<div className='App'>
 			<header className='App-header'>
-				Welcome, This is shared package from monorepo boilerplate.
+				Welcome, This is components package from monorepo boilerplate.
 				<p>
 					If is needed, could be as a standalone application or as a storybook.
 					Depends of needs.
