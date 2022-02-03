@@ -47,7 +47,11 @@ some specific configuration you can extend/overwrite cra by using for example **
 
 
 ## Technical documentation
-### 1. Install dependencies
+### 1. Flow for creating new package
+* To create new package go to packages - `cd packages` and create package e.g. API `mkdir api`
+* Then, we can create package.json for created package, run inside package folder `yarn init`
+* The new name should follow our NPM Org scope ex. @pro-monorepo-boilerplate
+### 2. Install dependencies
 * To install dependency globally (for all packages), just run  
 ```lerna add npm-lib-name```  
 * To install dependencies as dev, we have to add prefix  `--dev` 
