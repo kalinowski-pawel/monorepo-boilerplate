@@ -4,7 +4,31 @@
     "prettier"
   ],
   "rules": {
-    "indent": ["error", 2],
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "indent": ["warn", 2],
+    "import/order": [
+      "error",
+      {
+        "groups": ["external", "builtin", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["internal"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "max-len": ["error", { "code": 120 }],
+    "no-multiple-empty-lines": "error",
+    "no-var": "error",
+    "prefer-const": ["error", { "destructuring": "all" }],
+    "quotes": [2, "single", { "avoidEscape": true }]
   }
 }

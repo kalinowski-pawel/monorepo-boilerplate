@@ -13,6 +13,7 @@
     "start:components": "lerna run --scope @pro-monorepo-boilerplate/components --stream start",
     "storybook:components": "lerna run --scope @pro-monorepo-boilerplate/components --stream storybook",
     "storybook-build:components": "lerna run --scope @pro-monorepo-boilerplate/components --stream build-storybook",
+    "start:server": "lerna run --scope @pro-monorepo-boilerplate/api --stream start:dev",
     "test": "jest"
   },
   "workspaces": [

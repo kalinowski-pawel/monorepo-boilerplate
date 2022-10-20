@@ -1,4 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
+
 import rootReducer from '../modules/reducers';
 
 export type RootState = ReturnType<typeof rootReducer>;

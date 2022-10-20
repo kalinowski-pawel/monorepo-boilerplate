@@ -5,7 +5,7 @@ Pro-Monorepo boilerplate was created to fast and easy start monorepo application
 Project allows creating complex application on frontend and backend, also we can add additional tools.  
 For faster developing **Pro-Monorepo boilerplate** contains packages :
 
-* **client** - allows creating frontend app with **react v17** and **Next.js**, **TypeScript**, **Redux**
+* **client** - allows creating frontend app with **react v18** and **Next.js**, **TypeScript**, **Redux**
 * **components** - directory for components, integrated with **storybook** and using **materialUI** with **TypeScript**
  
 ### Tips and possibilities
@@ -29,7 +29,7 @@ some specific configuration you can extend/overwrite cra by using for example **
 ### client:
 - next.js
   - next router -> routing is handled by next.js, more info here [Next.js routing](https://nextjs.org/docs/routing/introduction)
-- react v17 CRA
+- react v18 CRA
 - typescript
 - jest/testing library
 - architecture -> redux, redux thunk, modules(actions, selectors, reducers, actionTypes), services, immer / TODO 
@@ -37,7 +37,7 @@ some specific configuration you can extend/overwrite cra by using for example **
 - styling -> css modules with SASS
 
 ### components:
-- react v17 CRA
+- react v18 CRA
 - typescript
 - storybook
 - materialUI
@@ -47,7 +47,11 @@ some specific configuration you can extend/overwrite cra by using for example **
 
 
 ## Technical documentation
-### 1. Install dependencies
+### 1. Flow for creating new package
+* To create new package go to packages - `cd packages` and create package e.g. API `mkdir api`
+* Then, we can create package.json for created package, run inside package folder `yarn init`
+* The new name should follow our NPM Org scope ex. @pro-monorepo-boilerplate
+### 2. Install dependencies
 * To install dependency globally (for all packages), just run  
 ```lerna add npm-lib-name```  
 * To install dependencies as dev, we have to add prefix  `--dev` 
