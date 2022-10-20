@@ -1,15 +1,15 @@
-import actionTypes from './actionTypes';
-import { AppThunk } from '../../src/store';
 import services from '../../services';
+import { AppThunk } from '../../src/store';
+import actionTypes from './actionTypes';
 
 const setGHUsers = (users: [object]) => ({
   type: actionTypes.GET_GH_USERS,
-  payload: users
+  payload: users,
 });
 
 const setFetching = (fetching: boolean) => ({
   type: actionTypes.FETCHING,
-  fetching: fetching
+  fetching: fetching,
 });
 
 export const getGHUsers = (): AppThunk => async (dispatch) => {
